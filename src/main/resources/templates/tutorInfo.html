@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tutor</title>
+  <link rel="stylesheet" type="text/css" href="css/sub.css" >
+  <style>
+
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    }
+
+    body{
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f2f2f2;
+    }
+
+    .container{
+        position: relative;
+        max-width: 430px;
+        background-color: #fff;
+        padding: 5em 5em;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0);
+
+    }
+
+    .container .forms{
+        padding: 0px;
+    }
+
+    .title{
+        position: relative;
+        font-size: 25px;
+        font-weight: 600;
+        }
+
+        .form-group{
+            position: relative;
+            height: 50px;
+            width: 100%;
+            margin-top: 5px;
+        }
+
+        .form-control{
+        position: absolute;
+         height: 100%;
+         width: 100%;
+         border: none;
+         outline: none;
+         border-bottom: 2px solid #ccc;
+         border-top: 2px solid transparent;
+        }
+
+        label{
+            font-size: 13px;
+            padding-top: 30px;
+        }
+
+        .form-group-1{
+            display: flex;
+        }
+        .form-control-1{
+            position: relative;
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+            color: #fff;
+            font-weight: bold;
+            border: none;
+            outline: none;
+            background-color: blue;
+            justify-content: space-around;
+        }
+        .next{
+            margin-left: 4em;
+        }
+        .back{
+            background-color: red;
+        }
+
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="forms">
+    <div class="form">
+      <span class="title">Select Subjects</span>
+      <form action="#">
+
+        <div class="form-group">
+
+          <select name="" id="" class="form-control">
+            <option value="">--Select grade--</option>
+            <option value="">8</option>
+            <option value="">9</option>
+            <option value="">10</option>
+            <option value="">11</option>
+            <option value="">12</option>
+
+          </select>
+
+        </div>
+
+        <div class="form-group">
+
+          <select name="" id="" class="form-control">
+            <option value="">--Select subject(s)--</option>
+            <option value="">Mathematics</option>
+            <option value="">English</option>
+            <option value="">Afrikaans</option>
+            <option value="">Accounting</option>
+
+          </select>
+
+        </div>
+
+        <div class="form-group form-group-1">
+          <input type="submit"  value="Back" id="back" class="form-control-1 back">
+          <input type="submit"  value="Submit" id="next" class="form-control-1 next">
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
+</body>
+<script>
+    let button = document.getElementById('back');
+    let submit = document.getElementById('next');
+
+    button.onclick = function(e) {
+    e.preventDefault();
+
+    location.href = 'tutor';
+    }
+</script>
+</html>
