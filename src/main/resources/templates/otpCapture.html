@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forgot Passsword Page</title>
+  <link rel="stylesheet" type="text/css" href="css/fpwd.css" >
+
+  <style>
+
+    :root{
+    --error-color: #e74c3c;
+    --success-color: #2ecc71;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    }
+
+    body{
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f2f2f2;
+    }
+
+    .container{
+        position: relative;
+        max-width: 500px;
+        background-color: #fff;
+        padding: 5em 5em;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0);
+
+    }
+
+    .container .forms{
+        padding: 0px;
+    }
+
+    .title{
+        position: relative;
+        font-size: 25px;
+        font-weight: 600;
+        }
+
+        .form-group{
+            position: relative;
+            height: 50px;
+            width: 100%;
+            margin-top: 5px;
+        }
+
+        .form-control{
+        position: absolute;
+         height: 100%;
+         width: 100%;
+         border: none;
+         outline: none;
+         border-bottom: 2px solid #ccc;
+         border-top: 2px solid transparent;
+        }
+        a .label-msg{
+            color: #000;
+        }
+
+        .btn{
+            font-size: .8em;
+            max-width: 250px;
+            color: #fff;
+            font-weight: bold;
+            background-color: blue;
+        }
+
+        .form-control:hover{
+            border: 0;
+            border-bottom: .2em solid gold;
+        }
+
+        a{
+            text-decoration: none;
+        }
+        .fpassword{
+            text-align: center;
+        }
+        .fpassword a{
+            font-size: .8em;
+            text-decoration: underline;
+        }
+
+
+
+        .form-group small{
+            color: var(--error-color);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            visibility: hidden;
+
+        }
+
+        .error input {
+            border-bottom-color: var(--error-color);
+        }
+
+        .form-group.error small{
+            visibility: visible;
+        }
+
+        .form-group.success small{
+           visibility: hidden;
+        }
+
+        .form-group input::after{
+            content: '*';
+            color: red;
+        }
+
+        .btn-back{
+            background-color: var(--error-color);
+        }
+
+  </style>
+
+</head>
+<body>
+
+<div class="container">
+  <div class="forms">
+    <div class="form">
+      <span class="title">Enter OPT Number</span>
+      <form action="#" class="form" id="form">
+
+        <div class="form-group">
+          <input type="text" name="otpNumber" id="opt" placeholder="OPT Number" class="form-control">
+          <small>Error Message</small>
+        </div>
+
+        <div class="form-group">
+          <input type="submit"  id="btn" value="Submit OTP" class="form-control btn">
+        </div>
+        <div class="form-group">
+          <input type="submit"  id="btn-back" value="Back" class="form-control btn-back">
+        </div>
+
+
+
+
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+    //Variable declaration
+const form = document.getElementById('form');
+const email = document.getElementById('email');
+const password = document.getElementById('password');
+
+
+//Show error messages
+function showError(input, message){
+const formControl = input.parentElement;
+formControl.className = 'form-group error';
+const small = formControl.querySelector('small');
+small.innerText = message;
+}
+
+//Show successful Message
+
+function showSuccess(input)
+{
+    const formControl = input.parentElement;
+    formControl.className = 'form-group success';
+}
+
+
+//getFieldName
+
+//get FieldName
+function getFieldName(input) {
+    return input.id.charAt(0).toUpperCase() + input.id.slice(1);
+}
+
+//Email RegExp
+
+function checkEmail(input) {
+    const regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if(regex.test(input.value.trim())) {
+        showSuccess(input)
+    }else {
+        showError(input,'Email is not invalid');
+    }
+}
+
+// All inputs are required
+function checkRequired(inputArr) {
+    inputArr.forEach(function(input){
+        if(input.value.trim() === ''){
+            showError(input,`${getFieldName(input)} is required`)
+        }else {
+            showSuccess(input);
+        }
+    });
+}
+
+//check input Length
+function checkLength(input, min ,max) {
+    if(input.value.length < min) {
+        showError(input, `${getFieldName(input)} must be at least ${min} characters`);
+    }else if(input.value.length > max) {
+        showError(input, `${getFieldName(input)} must be less than ${max} characters`);
+    }else {
+        showSucces(input);
+    }
+}
+
+
+
+let backBtn = document.getElementById("btn-back");
+backBtn.onclick = function(e){
+
+    location.href = "forgotPassword";
+}
+
+//Event Listener
+form.addEventListener('submit',function(e){
+    e.preventDefault();
+
+    checkRequired([email,password]);
+    checkEmail(email);
+    //checkLength(password,8,14);
+
+});
+
+
+
+</script>
+</body>
+</html>
