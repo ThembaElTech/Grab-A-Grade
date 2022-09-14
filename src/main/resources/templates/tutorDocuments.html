@@ -5,208 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tutor Page</title>
-    <link href="css/signUp.css" rel="stylesheet">
+    <link href="" th:href="@{/css/signUp.css}" rel="stylesheet">
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-    <style>
-
-* {
-    position: relative;
-    margin: auto;
-    background-color: #f2f2f2;
-    justify-content: center;
-    max-height: 100vh;
-    max-width: 100%;
-
-}
-
-.main-container {
-
-    background-color: #fff;
-    margin-top: 25px;
-    width: 941px;
-    height: 653px;
-    padding: 25px;
-
-}
-
-.second-wrapper {
-    background-color: #f2f2f2;
-    margin-top: 25px;
-    width: 675px;
-    height: 514px;
-    padding: 25px;
-
-}
-
-.form-container {
-    background-color: #fff;
-    text-align: center;
-    justify-content: space-around;
-    width: 529px;
-    height: 298px;
-    margin: 50px;
-    margin-bottom: 10px;
-    border-radius: 10px;
-
-
-}
-
-form {
-    position: relative;
-    top: 40px;
-}
-
-h2 {
-    background-color: #fff;
-    padding-bottom: 15px;
-}
-
-.form-group {
-    background-color: #fff;
-    padding: 5px;
-}
-
-input {
-    width: 308px;
-    background-color: #fff;
-    height: 44px;
-    outline: none;
-    border: none;
-    border-bottom: 3px solid #000;
-}
-
-#createBtn {
-    border: unset;
-    background-color: #23ceba;
-    border-radius: 10px;
-    color: #fff;
-    font-size: 20px;
-
-}
-
-h2{
-    font-size: 30px;
-    color: #23ceba;
-}
-
-a{
-    text-decoration: none;
-}
-.signIn{
-    position: relative;
-    top: 40px;
-    background-color: #fff;
-
-}
-span{
-    background-color: #fff;
-    color: #000;
-}
-
-.or-container{
-    position: relative;
-    right: 23px;
-    background-color: #fff;
-    text-align: center;
-    border-radius: 10px;
-    width: 529px;
-    height: 42px;
-
-}
-
-.or{
-    position: relative;
-    background-color: #fff;
-    top: 14px;
-    color: #C3BFBF;
-}
-
-.or:before{
-    content: "";
-    display: block;
-    width: 40%;
-    height: 2px;
-    background: #C3BFBF;
-    left: 20px;
-    top: 50%;
-    position: absolute;
-}
-
-.or:after{
-    content: "";
-    display: block;
-    width: 40%;
-    height: 2px;
-    background: #C3BFBF;
-    right: 20px;
-    top: 50%;
-    position: absolute;;
-}
-
-.social-auth{
-    display: flex;
-    position: relative;
-    top: 15px;
-    right: 23px;
-    text-align: center;
-    border-radius: 10px;
-    background-color: #fff;
-    width: 529px;
-    height: 78px;
-}
-
-a{
-    text-decoration: none;
-    background-color: #fff;
-}
-
-img{
-    height: 35px;
-    background-color: #fff;
-}
-
-
-.google-icon{
-    background-color: #fff;
-    left: 75px;
-}
-.facebook-icon{
-    background-color: #fff;
-}
-.twitter-icon{
-    background-color: #fff;
-    right: 75px;
-}
-
-
-/*
-Personal Information CSS for Dropbox menu
-
-*/
-
-select{
-    width: 308px;
-    background-color: #fff;
-    height: 44px;
-    outline: none;
-    border: none;
-    border-bottom: 3px solid #000;
-}
-
-.form-container-1 {
-    background-color: #fff;
-    text-align: center;
-    justify-content: space-around;
-    width: 529px;
-    height: 430px;
-    margin: 50px;
-    margin-bottom: 10px;
-    border-radius: 10px;
-
-
-}
-
-    </style>
 </head>
 <body>
 <div class="main-container">
@@ -220,7 +20,20 @@ select{
                     <input type="text" placeholder="Enter Address" name="${address}" id="address" />
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                 </div>
+                <div class="form-group" >
 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                    <label> identity document</label>
+                    <br>
+                    <br>
+                    <input type="file" id="idFile" ><br><br>
+                </div>
+                <div class="form-group">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                    <label> qualification document</label>
+                    <br><br>
+                    <input type="file" id="qualification"  multiple><br><br>
+                </div>
 
                 <div class="form-group">
                     <input type="text" placeholder="Enter experience" name="${experience}" id="experience" />
