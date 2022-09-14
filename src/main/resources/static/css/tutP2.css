@@ -1,0 +1,200 @@
+* {
+    position: relative;
+    margin: auto;
+    background-color: #f2f2f2;
+    justify-content: center;
+    max-height: 100vh;
+    max-width: 100%;
+    
+}
+
+.main-container {
+
+    background-color: #fff;
+    margin-top: 25px;
+    width: 941px;
+    height: 653px;
+    padding: 25px;
+
+}
+
+.second-container {
+    background-color: #f2f2f2;
+    margin-top: 25px;
+    width: 675px;
+    height: 514px;
+    padding: 25px;
+
+}
+
+.form-container {
+    background-color: #fff;
+    text-align: center;
+    justify-content: space-around;
+    width: 529px;
+    height: 298px;
+    margin: 50px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+
+
+}
+
+form {
+    background-color: #fff;
+    position: relative;
+    top: 40px;
+}
+
+h2 {
+    background-color: #fff;
+    padding-bottom: 15px;
+}
+h3 {
+    background-color: #fff;
+    padding-bottom: 15px;
+}
+.form-group {
+    background-color: #fff;
+    padding: 5px;
+}
+
+input {
+    width: 308px;
+    background-color: #fff;
+    height: 44px;
+    outline: none;
+    border: none;
+    border-bottom: 3px solid #000;
+}
+
+#createBtn {
+    border: unset;
+    background-color: #23ceba;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 20px;
+
+}
+
+h2{
+    font-size: 30px;
+    color: #23ceba;
+}
+
+a{
+    text-decoration: none;
+}
+.signIn{
+    position: relative;
+    top: 40px;
+    background-color: #fff;
+    
+}
+span{
+    background-color: #fff;
+    color: #000;
+}
+
+.or-container{
+    position: relative;
+    right: 23px;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    width: 529px;
+    height: 42px;
+
+}
+
+.or{
+    position: relative;
+    background-color: #fff;
+    top: 14px;
+    color: #C3BFBF;
+}
+
+.or:before{
+    content: "";
+    display: block;
+    width: 40%;
+    height: 2px;
+    background: #C3BFBF;
+    left: 20px;
+    top: 50%;
+    position: absolute;
+}
+
+.or:after{
+    content: "";
+    display: block;
+    width: 40%;
+    height: 2px;
+    background: #C3BFBF;
+    right: 20px;
+    top: 50%;
+    position: absolute;;
+}
+
+.social-auth{
+    display: flex;
+    position: relative;
+    top: 15px;
+    right: 23px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #fff;
+    width: 529px;
+    height: 78px;
+}
+
+a{
+    text-decoration: none;
+    background-color: #fff;
+}
+
+img{
+    height: 35px;
+    background-color: #fff; 
+}
+
+
+.google-icon{
+    background-color: #fff; 
+    left: 75px;
+}
+.facebook-icon{
+    background-color: #fff; 
+}
+.twitter-icon{
+    background-color: #fff; 
+    right: 75px;
+}
+
+
+/* 
+Personal Information CSS for Dropbox menu
+
+*/
+
+select{
+    width: 308px;
+    background-color: #fff;
+    height: 44px;
+    outline: none;
+    border: none;
+    border-bottom: 3px solid #000;
+}
+
+.form-container-1 {
+    background-color: #fff;
+    text-align: center;
+    justify-content: space-around;
+    width: 529px;
+    height: 430px;
+    margin: 50px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+
+
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <title>Tutor Information</title>
+<link th:href="@{/css/tutP2.css}" rel="stylesheet">
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="second-container">
+            <div class="form-container">
+
+                <form action="@{/tutorpage2}" method="post" class="form">
+                    <h2>Tutor Information</h2>
+                
+                    <h3>Select preffered grade(s)</h3>
+                <select name="preffered grade(s)" id="grade"  >
+                <option value="" selected="selected"></option>
+                <option value="Grade 8">Grade 8</option>
+                <option value="Grade 9">Grade 9</option>
+                <option value="Grade 10">Grade 10</option>
+                <option value="Grade 11">Grade 11</option>
+                <option value="Grade 12">Grade 12</option>
+                </select>
+
+                <h3>Select preffered subject(s)</h3>
+                <select name="preffered subject(s)" id="subjects">
+                <option value="" selected="selected"></option>
+                <option value="Technology">Technology</option>
+                <option value="Creative Arts">Creative Arts</option>
+                <option value="Natural Sciences">Natural Sciences</option>
+                <option value="Social Sciences">Social Sciences</option>
+                <option value="Life Orientaion">Life Orientaion</option>
+
+
+                
+                
+
+
+                </select>
+               
+                <div class="form-group">
+                    <input type="submit" value="Submit" id="createBtn"/> 
+                 </div>
+                </form>
+                
+            </div>
+
+            
+
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
+
+
+
