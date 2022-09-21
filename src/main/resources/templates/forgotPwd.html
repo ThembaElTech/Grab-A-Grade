@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <tittle>
+
+  </tittle>
+  <link rel="stylesheet" href="reset.css">
+
+  <style>
+
+    input {
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #000;
+}
+
+* {
+    background-color: #f2f2f2;
+    margin: auto;
+    padding: 10px;
+    max-height: 100vh;
+    max-width: 100%;
+}
+
+.main-container {
+    background-color: #fff;
+    margin: 25px;
+    width: 941px;
+    height: 653px;
+    margin-left: 200px;
+}
+
+.second-container {
+    background: #f2f2f2;
+    width: 675px;
+    height: 514px;
+    margin: 75px;
+}
+
+.form-container {
+    margin-top: 100px;
+    background-color: #fff;
+    text-align: center;
+    color: aqua;
+    width: 530px;
+    height: 230px;
+    margin: 75px;
+}
+
+h2 {
+    background-color: #fff;
+}
+
+.form-wrap {
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.form-box {
+    background-color: #fff;
+}
+
+.sendBtn {
+    width: 308px;
+    background-color: aqua;
+    border-radius: 10px;
+}
+
+.sendBtn:hover {
+    transform: translate(-12px, -12px);
+}
+
+.sendBtn:hover::before {
+    transform: translate(6px, 6px);
+}
+
+.sendBtn:hover::after {
+    transform: translate(6px, 6px);
+}
+
+.email {
+    background-color: #fff;
+    width: 308px;
+}
+
+
+/* //.text-center {
+    text-align: center;
+} */
+
+
+/* .form-container {
+    justify-content: center;
+    align-items: center;
+} */
+  </style>
+
+
+</head>
+
+<body>
+<div class="main-container">
+
+  <div class="second-container">
+
+    <div class="form-container">
+      <form th:action="@{/Reset}" id="form" th:object="${user}"class="form-wrap">
+        <h2>Reset password</h2>
+        <div class="form-box">
+          <input type="text" placeholder="Enter Email" class="email" />
+        </div>
+
+        <div class="form-box">
+          <input type="submit" value="Send" class="sendBtn" />
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+
+
+</div>
+
+
+
+</body>
+
+</html>
