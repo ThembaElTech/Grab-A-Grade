@@ -13,7 +13,7 @@
         <div class="second-wrapper">
             <div class="form-container">
 
-                <form action="@{/signup}" method="post" class="form">
+                <form th:action="@{/signup}" method="post" class="form" th:object="${UserAuthModel}">
                     <h2>SignUp</h2>
                     <div class="form-group">
                         <input type="text" placeholder="Email" name="email" id="username" />
