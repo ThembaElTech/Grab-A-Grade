@@ -1,15 +1,15 @@
 package com.grabagrade.controller;
 
-import com.grabagrade.interfaces.ISignIn;
+import com.grabagrade.interfaces.ISignUp;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class SignInImpl implements ISignIn {
+public class SIgnUpControllerImpl implements ISignUp {
     @Override
-    @GetMapping("/signIn")
-    public String showSignIn()
+    @GetMapping("/signup")
+    public String showSignUp()
     {
-        return "signIn";
+        return "signUp";
     }
 }
