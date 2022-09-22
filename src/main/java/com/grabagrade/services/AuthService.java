@@ -19,4 +19,14 @@ public class AuthService {
         return FirebaseAuth.getInstance().createUser(userAuthRequest);
     }
 
+
+    //Get user authentication details
+    public UserRecord getAuthDetails(UserAuthModel userAuthModel) throws FirebaseAuthException
+    {
+        UserRecord getUserRecord = FirebaseAuth.getInstance().getUserByEmail(userAuthModel.getEmail());
+
+        return FirebaseAuth.getInstance().getUser(getUserRecord.getUid());
+    }
+
+
 }
